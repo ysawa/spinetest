@@ -13,6 +13,7 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'haml-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -20,7 +21,19 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'haml'
 gem 'jquery-rails'
+
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
+gem "bourbon"
+
+# Optional support for eco templates
+gem 'eco'
+
+# Embed Spine automatically
+gem 'spine-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,3 +49,38 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+group :development, :test do
+  gem 'fakeweb'
+  gem 'rspec-rails'
+  gem 'spork', '1.0.0rc3'
+  gem 'capybara'
+  gem 'fabrication'
+  gem 'rb-fsevent', require: false if RUBY_PLATFORM =~ /darwin/i # mac os x
+  gem 'launchy'
+  gem 'guard-spork'
+  gem 'guard-rspec'
+  gem 'jasmine-rails'
+  gem 'database_cleaner'
+  gem 'guard-jasmine-headless-webkit', git: 'git://github.com/johnbintz/guard-jasmine-headless-webkit.git'
+  gem 'jasmine-headless-webkit', git: 'git://github.com/johnbintz/jasmine-headless-webkit.git'
+  gem 'jasmine-headless-webkit-reporters', git: 'git://github.com/johnbintz/jasmine-headless-webkit-reporters.git'
+
+  # Notifiers
+  case RUBY_PLATFORM
+  when /linux/i
+    gem 'libnotify'
+  when /darwin/i
+    gem 'growl'
+  when /mswin(?!ce)|mingw|cygwin|bccwin/i
+    gem 'rb-notifu'
+  end
+end
+
+# Deploy with Capistrano
+
+group :deployment do
+  gem 'capistrano'
+  gem 'capistrano_colors'
+  gem 'rvm-capistrano'
+end
