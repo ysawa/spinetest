@@ -31,6 +31,7 @@ gem "bourbon"
 
 # Optional support for eco templates
 gem 'eco'
+gem 'ruby-haml-js'
 
 # Embed Spine automatically
 gem 'spine-rails'

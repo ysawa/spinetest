@@ -1,6 +1,0 @@
-<h1>Show Post</h1>
-
-<p>Title: <%= @title %></p>
-<p>Content: <%= @content %></p>
-
-<a data-type="edit">Edit</a> <a data-type="back">Back</a>

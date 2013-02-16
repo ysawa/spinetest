@@ -1,0 +1,11 @@
+%h1
+  Show Post
+
+%p
+  Title:
+  = title
+%p
+  Content:
+  = content
+
+<a data-type="edit">Edit</a> <a data-type="back">Back</a>
