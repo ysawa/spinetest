@@ -1,0 +1,13 @@
+%h1 New Post
+%form
+  %label
+    %span Title
+    %input{ autofocus:"", name:"title", required:"", type:"text", value: title }
+    %br
+  %label
+    %span Content
+    %input{ name:"content", required: "", type: "text", value: content }
+    %br
+  %button Create
+%p
+  %a(data-type="back") Back

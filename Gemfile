@@ -30,7 +30,6 @@ gem "twitter-bootstrap-rails"
 gem "bourbon"
 
 # Optional support for eco templates
-gem 'eco'
 gem 'ruby-haml-js'
 
 # Embed Spine automatically

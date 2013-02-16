@@ -8,4 +8,5 @@
   Content:
   = content
 
-<a data-type="edit">Edit</a> <a data-type="back">Back</a>
+%p
+  <a data-type="edit">Edit</a> <a data-type="back">Back</a>
