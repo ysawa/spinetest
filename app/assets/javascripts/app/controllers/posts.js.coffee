@@ -13,10 +13,11 @@ class New extends Spine.Controller
 
   constructor: ->
     super
+    @item = new Post(title: '', content: '')
     @active @render
 
   render: ->
-    @html @view('posts/new')
+    @html @view('posts/new')(@item)
 
   back: ->
     @navigate '/posts'
